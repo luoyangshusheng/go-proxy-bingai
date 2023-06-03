@@ -46,13 +46,14 @@ const initPwaOptions = (env: Record<string, string>) => {
     //   type: 'module',
     // },
     strategies: 'injectManifest',
-    workbox: {
-      cleanupOutdatedCaches: true,
-      clientsClaim: true,
-      skipWaiting: true,
-    },
+    // workbox: {
+    //   cleanupOutdatedCaches: true,
+    //   clientsClaim: true,
+    //   skipWaiting: true,
+    // },
     // 取消注册服务工作进程
     // selfDestroying: true,
+    registerType: 'autoUpdate',
   };
   return pwaOptions;
 };
